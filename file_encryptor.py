@@ -107,15 +107,15 @@ def main():
 
     parser = argparse.ArgumentParser(description="Asymmetric File Encryptor")
 
-    parser.add_argument("-f", "--file",action="store", help="File to encrypt/decrypt")
+    parser.add_argument("-f", "--file",action="store", help="File to encrypt ordecrypt")
     parser.add_argument("-k", "--key",action="store", 
     					help="Specify RSA Public Key for Encryption and RSA Private for Decryption")
     parser.add_argument("-g", "--generate-keys", dest="generate_key", action="store_true",
-                        help="Whether to generate a new key or use existing")
+                        help="Generate Private and Public RSA keys in current directory")
     parser.add_argument("-e", "--encrypt", action="store_true",
-                        help="Whether to encrypt the file, only -e or -d can be specified.")
+                        help="Specify to encrypt file")
     parser.add_argument("-d", "--decrypt", action="store_true",
-                        help="Whether to decrypt the file, only -e or -d can be specified.")
+                        help="Specify to decrypt file")
 
     args = parser.parse_args()
 
